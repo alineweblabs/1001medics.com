@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="keywords" content="Medic, Medical Center" />
+        <meta name="description" content="Responsive Medical Health Template" />
+        <title>{% block title %} {% endblock %}</title>
+
+        {% block css %}
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Volkhov:400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/static/style/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/static/style/superfish.css" />
+        <link rel="stylesheet" type="text/css" href="/static/style/fancybox/jquery.fancybox.css" />
+        <link rel="stylesheet" type="text/css" href="/static/style/jquery.qtip.css" />
+        <link rel="stylesheet" type="text/css" href="/static/style/jquery-ui-1.9.2.custom.css" />
+        <link rel="stylesheet" type="text/css" href="/static/style/style.css" />
+        <link rel="stylesheet" type="text/css" href="/static/style/responsive.css" />
+        <link rel="shortcut icon" href="/static/images/favicon.ico" />
+        {% endblock css %}
+        
+        {% block extra_css %}{% endblock extra_css %}
+
+        {% block js_head %}
+        <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.ba-bbq.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery-ui-1.9.2.custom.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.carouFredSel-5.6.4-packed.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.sliderControl.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.linkify.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.timeago.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.hint.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.isotope.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.isotope.masonry.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.fancybox-1.3.4.pack.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.qtip.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript" src="/static/js/main.js"></script>
+        {% endblock js_head %}
+
+        {% block extra_js_head %}{% endblock extra_js_head %}
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="site_container">
+            <div class="header_container">
+                <div class="header clearfix">
+                    <div class="header_left">
+                        <a href="home.html" title="GYMBASE">
+                            <img src="/static/images/header_logo.png" alt="logo" />
+                            <span class="logo">medicenter</span>
+                        </a>
+                    </div>
+                    <ul class="sf-menu header_right">
+                        <li>
+                            <a href="/" title="INICIO">
+                                INICIO
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/como.funciona/" title="COMO FUNCIONA">
+                                COMO FUNCIONA
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog/" title="BLOG">
+                                BLOG
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url Contactanos %}" title="CONTACTANOS">
+                                CONTACTANOS
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mobile_menu">
+                        <select>
+                            <option value="-">-</option>
+                            <option value="/">INICIO</option>
+                            <option value="/como.funciona/">COMO FUNCIONA</option>
+                            <option value="/blog/">BLOG</option>
+                            <option value="{% url Contactanos %}">CONTACTANOS</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            {% block content %}{% endblock content %}
+            <div class="footer_container">
+                <div class="footer">
+                    <ul class="footer_banner_box_container clearfix">
+                        <li class="footer_banner_box super_light_blue">
+                            <h2>
+                                Health Insurance
+                            </h2>
+                            <p>
+                                <a class="icon_small_arrow right_white" href="#">Here in medicenter we have individual</a>
+                            </p>
+                        </li>
+                        <li class="footer_banner_box light_blue">
+                            <h2>
+                                Medical Records
+                            </h2>
+                            <p>
+                                <a class="icon_small_arrow right_white" href="#">Here in medicenter we have individual</a>
+                            </p>
+                        </li>
+                        <li class="footer_banner_box blue">
+                            <h2>
+                                Online Bill Pay
+                            </h2>
+                            <p>
+                                <a class="icon_small_arrow right_white" href="#">Here in medicenter we have individual</a>
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="footer_box_container clearfix">
+                        <div class="footer_box">
+                            <h3 class="box_header">
+                                Medicenter Clinic
+                            </h3>
+                            <p class="info">
+                                Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada individual.
+                            </p>
+                            <ul class="footer_contact_info_container clearfix">
+                                <li class="footer_contact_info_row">
+                                    <div class="footer_contact_info_left">
+                                        Medicenter Clinic
+                                    </div>
+                                </li>
+                                <li class="footer_contact_info_row">
+                                    <div class="footer_contact_info_left">
+                                        33 Farlane Street
+                                    </div>
+                                    <div class="footer_contact_info_right">
+                                        +123 655 655
+                                    </div>
+                                </li>
+                                <li class="footer_contact_info_row">
+                                    <div class="footer_contact_info_left">
+                                        Keilor East
+                                    </div>
+                                    <div class="footer_contact_info_right">
+                                        +123 755 755
+                                    </div>
+                                </li>
+                                <li class="footer_contact_info_row">
+                                    <div class="footer_contact_info_left">
+                                        VIC 3033, Australia
+                                    </div>
+                                    <div class="footer_contact_info_right">
+                                        <a href="mailto:medicenter@mail.com" title="Send Email">
+                                            medicenter@mail.com
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="social_icons clearfix">
+                                <li>
+                                    <a class="social_icon facebook" href="http://facebook.com/QuanticaLabs" title="" target="_blank">
+                                        &nbsp;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social_icon twitter" href="https://twitter.com/QuanticaLabs" title="" target="_blank">
+                                        &nbsp;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social_icon googleplus" href="#" title="">
+                                        &nbsp;
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social_icon mail" href="mailto:medicenter@mail.com" title="">
+                                        &nbsp;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer_box">
+                            <div class="clearfix">
+                                <div class="header_left">
+                                    <h3 class="box_header">
+                                        Latest Posts
+                                    </h3>
+                                </div>
+                                <div class="header_right">
+                                    <a href="#" id="footer_recent_posts_prev" class="scrolling_list_control_left icon_small_arrow left_white"></a>
+                                    <a href="#" id="footer_recent_posts_next" class="scrolling_list_control_right icon_small_arrow right_white"></a>
+                                </div>
+                            </div>
+                            <div class="scrolling_list_wrapper">
+                                <ul class="scrolling_list footer_recent_posts">
+                                    <li class="icon_small_arrow right_white">
+                                        <a href="post.html">
+                                            Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.
+                                        </a>
+                                        <abbr title="29 May 2012" class="timeago">29 May 2012</abbr>
+                                    </li>
+                                    <li class="icon_small_arrow right_white">
+                                        <a href="post.html">
+                                            Lorem ipsum dolor sit amat velum.
+                                        </a>
+                                        <abbr title="04 Apr 2012" class="timeago">04 Apr 2012</abbr>
+                                    </li>
+                                    <li class="icon_small_arrow right_white">
+                                        <a href="post.html">
+                                            Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.
+                                        </a>
+                                        <abbr title="02 Feb 2012" class="timeago">02 Feb 2012</abbr>
+                                    </li>
+                                    <li class="icon_small_arrow right_white">
+                                        <a href="post.html">
+                                            Lorem ipsum dolor sit amat velum, consectetur adipiscing elit.
+                                        </a>
+                                        <abbr title="24 Jan 2011" class="timeago">24 Jan 2011</abbr>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_box last">
+                            <div class="clearfix">
+                                <div class="header_left">
+                                    <h3 class="box_header">
+                                        Latest Tweets
+                                    </h3>
+                                </div>
+                                <div class="header_right">
+                                    <a href="#" id="latest_tweets_prev" class="scrolling_list_control_left icon_small_arrow left_white"></a>
+                                    <a href="#" id="latest_tweets_next" class="scrolling_list_control_right icon_small_arrow right_white"></a>
+                                </div>
+                            </div>
+                            <div class="scrolling_list_wrapper">
+                                <ul class="scrolling_list latest_tweets">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright_area clearfix">
+                        <div class="copyright_left">
+                            © Copyright - <a href="http://themeforest.net/item/medicenter-responsive-medical-health-template/4000598?ref=QuanticaLabs" title="MediCenter Template" target="_blank">MediCenter Template</a> by <a href="http://quanticalabs.com" title="QuanticaLabs" target="_blank">QuanticaLabs</a>
+                        </div>
+                        <div class="copyright_right">
+                            <a class="scroll_top icon_small_arrow top_white" href="#top" title="Scroll to top">Top</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block js_plugins %}{% endblock js_plugins %}
+        {% block js %} {% endblock js %}
+        {% block extra_js %}{% endblock extra_js %}
+    </body>
+</html>
