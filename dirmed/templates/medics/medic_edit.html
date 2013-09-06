@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block title %} Registro {% endblock title %}
+
+{% block content %}
+	<form class="contact_form" id="contact_form" method="POST" action="">
+		{% csrf_token %}
+		{% for field in form %}
+			<div>
+				<label>{{field.label}}</label>
+				{{field}}
+				{% if field.help_text %}
+					<span>{{field.help_text}}</span>
+				{% endif %}
+				{{field.errors}}
+			</div>
+		{% endfor %}
+		<input type="submit" value="Enviar" />
+	</form>
+{% endblock content %}
