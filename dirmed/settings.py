@@ -122,6 +122,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.flatpages',
     'dirmed.apps.home',
+    'dirmed.apps.medics',
+    'dirmed.apps.system_catalogs',
 )
 
 # A sample logging configuration. The only tangible logging
