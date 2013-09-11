@@ -1,0 +1,33 @@
+{% extends "base/base.html" %}
+
+{% block title %} Iniciar Sesión {% endblock title %}
+
+{% block extra_css %}
+	<style>
+	</style>
+{% endblock extra_css %}
+
+{% block content %}
+	<form action="" method="POST">
+		{% csrf_token %}
+
+		<label>{{form.username.label}}</label>
+		<div class="block">
+			{{form.username}}
+			{% if form.username.errors %}
+				<span class="help-inline">{{form.username.errors}}</span>
+			{% endif %}
+		</div>
+
+		<label>{{form.password.label}}</label>
+		<div class="block">
+			{{form.password}}
+			{% if form.password.errors %}
+				<span class="help-inline">{{form.password.errors}}</span>
+			{% endif %}
+		</div>
+
+		<input type="submit" value="Login">
+
+	</form>
+{% endblock content %}

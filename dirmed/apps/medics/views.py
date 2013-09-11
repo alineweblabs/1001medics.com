@@ -11,4 +11,7 @@ def MedicAdd(request):
 	else:
 		ObjFrm = FrmAddMedic()
 	ctx = {'form':ObjFrm}
-  	return render_to_response('medics/medic_edit.html', ctx, context_instance=RequestContext(request))
+	return render_to_response('medics/medic_edit.html', ctx, context_instance=RequestContext(request))
+
+def MedicMain(request):
+	return render_to_response('medics/medic_main.html', context_instance=RequestContext(request))
